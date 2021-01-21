@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <env name="LD_LIBRARY_PATH" value="$(env LD_LIBRARY_PATH):$(env WEBOTS_HOME)/lib/controller"/>
+  <env name="PYTHONPATH" value="$(env PYTHONPATH):$(env WEBOTS_HOME)/lib/controller/python38"/>
+  <node name="Watchdog" pkg="integrator" type="watchdog.py" output="screen" respawn="true"/>
+</launch>

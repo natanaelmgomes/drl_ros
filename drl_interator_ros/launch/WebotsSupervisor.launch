@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <env name="LD_LIBRARY_PATH" value="$(env LD_LIBRARY_PATH):$(env WEBOTS_HOME)/lib/controller"/>
+  <env name="PYTHONPATH" value="$(env PYTHONPATH):$(env WEBOTS_HOME)/lib/controller/python38"/> 
+  <!--env name="WEBOTS_ROBOT_NAME" value="supervisor"/--> 
+  <node name="Webots_Supervisor" pkg="integrator" type="supervisor.py" output="screen" respawn="true" />
+</launch>
+
+<!--  respawn="true" não funciona no webots-->
