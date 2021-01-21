@@ -1,0 +1,288 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  info [
+    "Simulation environment"
+  ]
+  title "Simulation Environment"
+  ERP 0.8
+  basicTimeStep 4
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      material1 "box"
+      material2 "gripper"
+      coulombFriction [
+        -1
+      ]
+      bounce 0
+      softERP 0.6
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.17666665601312811 0.9276398469472978 0.3290489431813042 4.016125632480911
+  position -1.2636319973190018 2.2146837923869533 -1.1430940863259031
+}
+TexturedBackground {
+  texture "empty_office"
+  luminosity 0.5
+}
+TexturedBackgroundLight {
+  texture "entrance_hall"
+}
+Floor {
+  translation -0.93 0 -0.243
+  size 7.7 12.86
+  appearance Parquetry {
+    type "light strip"
+    textureTransform TextureTransform {
+      rotation 1.57
+      scale 0.4 0.4
+    }
+  }
+}
+CeilingLight {
+  translation 0.87 2.5 -4.78
+  bulbColor 0.913725 0.72549 0.431373
+  supportColor 0.533333 0.541176 0.521569
+  pointLightIntensity 3
+  pointLightCastShadows TRUE
+}
+CeilingLight {
+  translation -2.74 2.5 -4.78
+  name "ceiling light(5)"
+  bulbColor 0.913725 0.72549 0.431373
+  supportColor 0.533333 0.541176 0.521569
+  pointLightIntensity 3
+  pointLightCastShadows TRUE
+}
+CeilingLight {
+  translation 0.87 2.5 -0.31
+  name "ceiling light(1)"
+  bulbColor 0.913725 0.72549 0.431373
+  supportColor 0.533333 0.541176 0.521569
+  pointLightIntensity 3
+  pointLightCastShadows TRUE
+}
+CeilingLight {
+  translation -2.74 2.5 -0.31
+  name "ceiling light(4)"
+  bulbColor 0.913725 0.72549 0.431373
+  supportColor 0.533333 0.541176 0.521569
+  pointLightIntensity 3
+  pointLightCastShadows TRUE
+}
+CeilingLight {
+  translation 0.87 2.5 3.52
+  name "ceiling light(2)"
+  bulbColor 0.913725 0.72549 0.431373
+  supportColor 0.533333 0.541176 0.521569
+  pointLightIntensity 3
+  pointLightCastShadows TRUE
+}
+CeilingLight {
+  translation -2.74 2.5 3.52
+  name "ceiling light(3)"
+  bulbColor 0.913725 0.72549 0.431373
+  supportColor 0.533333 0.541176 0.521569
+  pointLightIntensity 3
+  pointLightCastShadows TRUE
+}
+PottedTree {
+  translation 2.15 0 -2.38
+}
+Robot {
+  translation 0 1 0
+  name "supervisor"
+  controller "<extern>"
+  supervisor TRUE
+}
+DEF table Table {
+  size 2.5 0.74 1.5
+  trayAppearance PBRAppearance {
+    baseColor 0.6616702641952757 0.656372701886135 0.5341653207467032
+    roughness 1
+  }
+}
+Robot {
+  translation -0.26912 0.98526 8.6158e-07
+  rotation 0.25056100542276666 0.9351130202381839 0.2505650054228532 -1.6378353071795866
+  children [
+    DEF Kinect Kinect {
+      translation -4.063850511095892e-06 0.21186502750312053 0.23175310112812364
+      rotation 0.9999999999999936 1.4813870358083823e-08 -1.1250142348599284e-07 -0.261795838412139
+    }
+  ]
+  name "camera"
+  controller "<extern>"
+  cpuConsumption 70
+  window "generic_window"
+}
+DEF block0 Solid {
+  translation 0.26851428074945 0.7734894051999998 0.5835431976528935
+  rotation -0.3313747558808581 1.360743704943499e-16 0.943499216303279 -3.1415926535897927
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "/home/ubuntu/Documents/textures/Aruco.jpeg"
+          ]
+          repeatS FALSE
+          repeatT FALSE
+        }
+        roughness 0.5
+        metalness 0
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            -0.03 0.03 0.03
+            0.03 0.03 0.03
+            0.03 0.03 -0.03
+            -0.03 0.03 -0.03
+            -0.03 -0.03 -0.03
+            0.03 -0.03 -0.03
+            0.03 -0.03 0.03
+            -0.03 -0.03 0.03
+            -0.03 -0.03 0.03
+            0.03 -0.03 0.03
+            0.03 0.03 0.03
+            -0.03 0.03 0.03
+            0.03 -0.03 -0.03
+            -0.03 -0.03 -0.03
+            -0.03 0.03 -0.03
+            0.03 0.03 -0.03
+            -0.03 -0.03 -0.03
+            -0.03 -0.03 0.03
+            -0.03 0.03 0.03
+            -0.03 0.03 -0.03
+            0.03 -0.03 0.03
+            0.03 -0.03 -0.03
+            0.03 0.03 -0.03
+            0.03 0.03 0.03
+          ]
+        }
+        texCoord TextureCoordinate {
+          point [
+            0 0
+            0 0
+            0 1
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+            0 0
+            1 0
+            1 1
+            0 1
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, -1, 4, 5, 6, 7, -1, 8, 9, 10, 11, -1, 12, 13, 14, 15, -1, 16, 17, 18, 19, -1, 20, 21, 22, 23, -1
+        ]
+        creaseAngle 1.5
+      }
+    }
+  ]
+  name "box"
+  model "box"
+  contactMaterial "box"
+  boundingObject Box {
+    size 0.06 0.06 0.06
+  }
+  physics Physics {
+  }
+}
+DEF block1 SolidBox {
+  translation 0.4005938963738122 0.7699894051999998 0.0711807083419753
+  rotation -0.6872941111440137 0.5136276884995395 -0.5136276884995398 -1.9372976038313408
+  name "box(1)"
+  size 0.06 0.06 0.06
+  contactMaterial "box"
+  physics Physics {
+  }
+}
+DEF block2 RubberDuck {
+  translation 0.3840503525620674 0.7734771516666799 0.4554016768886618
+  rotation -0.3874006971762955 0.3114451752140359 0.8677111285809458 -1.9182613830138093
+  scale 0.8
+  contactMaterial "box"
+  immersionProperties []
+}
+DEF block3 PingPongBall {
+  translation 0.11166064147179981 0.7634994477228491 0.35756412233531537
+  rotation 0.40009752826097045 -0.026052163470453926 -0.9161022064474961 -3.0742115594060917
+  contactMaterial "box"
+}
+DEF block4 SolidPipe {
+  translation 0.40574853059335597 0.7735897744242555 0.5879687608581533
+  rotation 0.9876471969161102 -0.00012215707838808255 0.15669396766116533 -3.1411416482059082
+  height 0.06
+  radius 0.03
+  thickness 0.01
+  contactMaterial "box"
+  physics Physics {
+  }
+}
+PlasticCrate {
+  translation 0.28 0.74 0.57
+  size 0.5 0.1 0.5
+}
+UR3e {
+  hidden position_0_0 3.141592653582351
+  hidden rotation_1 0 0 1 3.141592653582351
+  hidden position_1_0 -2.268931639941137
+  hidden rotation_2 0 -1 0 0.6981356399411368
+  hidden position_2_0 2.2689366843210044
+  hidden rotation_3 0 1 0 2.2689366843210044
+  hidden position_3_0 -1.5707958473332448
+  hidden rotation_4 0 0.9999999999999999 0 1.5196262340524156e-07
+  hidden position_4_0 -1.5707963273642753
+  hidden rotation_5 0 0 -1 1.5707963273642755
+  hidden position_5_0 4.640562975563952e-13
+  hidden translation_6 1.976415613870841e-12 1.6576601202800134e-11 0.08500012802050094
+  hidden position_8_0 0.03599996335662165
+  hidden position_8_1 0.035999963362563454
+  hidden translation_9 0 0.03599996335662165 0.09
+  hidden translation_11 0 -0.035999963362563454 0.09
+  translation 0.69 0.74 -1.06445e-08
+  controller "<extern>"
+  selfCollision FALSE
+  toolSlot [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.3
+        metalness 0.2
+      }
+      geometry Cylinder {
+        height 0.06
+        radius 0.03
+      }
+    }
+    KukaGripper {
+      translation 0 0.024 0
+    }
+    DEF touch_ref TouchSensor {
+      translation 0 0.15 0
+      name "touch_0"
+    }
+    DEF gps GPS {
+      translation 0 0.165 0
+    }
+  ]
+}
