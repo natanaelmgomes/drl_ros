@@ -9,6 +9,7 @@ This is research code, expect that it changes often and any fitness for a partic
 
 The source code is released under the **MIT License**.
 
+---
 
 # Package Overview
 
@@ -17,27 +18,33 @@ It consists of Webots simulation environment, control layer and a deep reinforce
 
 Author: Natanael M Gomes
 
+---
+
 # Installation
 
 TODO.
 
+---
+
 # Usage
 
 To bring the Webots simulation to ROS open the Environment.wbl and run:  
-'''
+```
 roslaunch ur_e_webots ur3e_joint_limited.launch  
 roslaunch gripper SimGripperKuka.launch  
 roslaunch integrator Camera.launch  
 roslaunch integrator WebotsSupervisor.launch  
 roslaunch integrator Watchdog.launch 
-'''
+```
 
 To bring the real UR3e run:
-'''
+```
 roslaunch ur_robot_driver ur3e_bringup.launch limited:=true robot_ip:=192.168.56.2  
 roslaunch ur3_e_moveit_config ur3_e_moveit_planning_execution.launch limited:=true  
 roslaunch realsense2_camera rs_camera.launch 
-'''
+```
+
+---
 
 # Calibration
 
